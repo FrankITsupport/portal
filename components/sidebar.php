@@ -10,12 +10,26 @@
         ?>
 
         <?php if ($role === 'store_manager'): ?>
-            <li><a href="#" class="nav-link" data-page="pages/store_dashboard.php">Dashboard</a></li>
-            <li><a href="#" class="nav-link" data-page="pages/inventory.php">Manage Inventory</a></li>
-            <li><a href="#" class="nav-link" data-page="pages/stock_management.php">Manage Stock</a></li>
-            <li><a href="#" class="nav-link" data-page="pages/stock_allocation.php">Stock Allocation</a></li>
-            <li><a href="#" class="nav-link" data-page="pages/recieve_stock.php">Receive Stock</a></li>
-            <li><a href="#" class="nav-link" data-page="pages/store_report.php">Reports</a></li>
+          <li><a href="#" class="nav-link" data-page="pages/store_dashboard.php">
+             <img src="assets/images/dash.png" > Dashboard
+              </a></li>
+
+          <li><a href="#" class="nav-link" data-page="pages/inventory.php">
+              <img src= "assets/images/inventory.png"> Manage Inventory
+              </a></li>
+
+          <li><a href="#" class="nav-link" data-page="pages/stock_management.php">
+            <img src="assets/images/stores.png"> Manage Stock
+              </a></li>
+
+          <li><a href="#" class="nav-link" data-page="pages/stock_allocation.php">
+          <img src="assets/images/allocate.png"> Stock Allocation
+          </a></li>
+
+          <li><a href="#" class="nav-link" data-page="pages/store_report.php">
+          <img src="assets/images/report.png"> Reports
+          </a></li>
+
 
         <?php elseif ($role === 'procurement_officer'): ?>
             <li><a href="#" class="nav-link" data-page="pages/procurement_dash.php">Dashboard</a></li>

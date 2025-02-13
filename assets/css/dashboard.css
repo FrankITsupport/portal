@@ -34,7 +34,7 @@ body {
   width: 250px;
   background-color: #000303;
   color: white;
-  padding: 30px;
+  padding: 0px;
   position: fixed;
   height: 100%;
   left: 0;
@@ -43,18 +43,21 @@ body {
 }
 
 .sidebar.collapsed {
-  width: 60px;
+  width: 0px;
 }
 .sidebar.collapsed + .content {
-  margin-left: 60px; 
+  margin-left: 0px; 
 }
 .sidebar ul {
   list-style: none;
-  padding: 0;
+  padding: 0%;
 }
 
 .sidebar li {
   margin: 0px;
+}
+.logo-container {
+  margin: 40px;
 }
 .sidebar .logo-container {
   display: block;
@@ -63,6 +66,12 @@ body {
 
 .sidebar.collapsed .logo-container {
   opacity: 0; /* Hide logo when sidebar is collapsed */
+}
+.nav-link img {
+  width: 20px;  /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adds spacing between the icon and text */
+  vertical-align: middle; /* Aligns icon with text */
 }
 
 .sidebar .nav-menu {
@@ -81,6 +90,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 10px;
+  margin-top: 10%;
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
