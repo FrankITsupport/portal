@@ -70,3 +70,102 @@ document.addEventListener("DOMContentLoaded", function () {
           .catch(error => console.error("Error loading default page:", error));
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebarMenu = document.getElementById("sidebar-menu");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Function to set active menu item
+  function setActiveMenu(page) {
+      navLinks.forEach(link => {
+          if (link.getAttribute("data-page") === page) {
+              link.parentElement.classList.add("active");
+          } else {
+              link.parentElement.classList.remove("active");
+          }
+      });
+  }
+
+  // Check for stored active menu
+  const storedPage = localStorage.getItem("activePage");
+  if (storedPage) {
+      setActiveMenu(storedPage);
+  }
+
+  // Add click event to each nav link
+  navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+          const page = this.getAttribute("data-page");
+          setActiveMenu(page);
+          localStorage.setItem("activePage", page); // Save active page
+      });
+  });
+});
+
+// Profile modal
+document.addEventListener("DOMContentLoaded", function () {
+  const profileModal = document.getElementById("profileModal");
+  const openProfileModal = document.getElementById("openProfileModal");
+  const closeProfileModal = document.querySelector(".close-profile");
+
+  // Toggle Profile Modal Dropdown
+  openProfileModal.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent closing when clicking the button
+      profileModal.style.display = (profileModal.style.display === "block") ? "none" : "block";
+  });
+
+  // Close Modal when clicking outside
+  document.addEventListener("click", function (event) {
+      if (!profileModal.contains(event.target) && event.target !== openProfileModal) {
+          profileModal.style.display = "none";
+      }
+  });
+
+  // Close Profile Modal with Close Button
+  closeProfileModal.addEventListener("click", function () {
+      profileModal.style.display = "none";
+  });
+});
+
+// ==================== inventory==================
+document.addEventListener("DOMContentLoaded", function () {
+  let modal = document.getElementById("inventoryModal");
+  let openModalBtn = document.querySelector(".add-inventory-btn");
+  let closeModalBtn = document.querySelector(".close");
+
+  // Function to open modal
+  function openInventoryModal() {
+      if (modal) {
+          modal.style.display = "flex";
+      } else {
+          console.error("Inventory modal not found!");
+      }
+  }
+
+  // Function to close modal
+  function closeInventoryModal() {
+      if (modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  // Open modal when button is clicked
+  if (openModalBtn) {
+      openModalBtn.addEventListener("click", openInventoryModal);
+  } else {
+      console.error("Add Inventory button not found!");
+  }
+
+  // Close modal when (×) is clicked
+  if (closeModalBtn) {
+      closeModalBtn.addEventListener("click", closeInventoryModal);
+  } else {
+      console.error("Close button not found!");
+  }
+
+  // Close modal when clicking outside of it
+  window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+          closeInventoryModal();
+      }
+  });
+});

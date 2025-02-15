@@ -15,11 +15,11 @@ $role = $_SESSION['role'] ?? 'User';
 $roleDefaultPages = [
     'admin' => 'admin_dash.php',
     'procurement' => 'procurement_dash.php',
-    'store' => 'stock_dash.php' // Store department default
+    'store' => 'stock_dashboard.php' // Store department default
 ];
 
 // Set the default page based on the role
-$defaultPage = $roleDefaultPages[$role] ?? 'stock_dash.php';
+$defaultPage = $roleDefaultPages[$role] ?? 'stock_dashboard.php';
 
 // Check if a specific page is requested, otherwise load default
 $page = $_GET['page'] ?? $defaultPage;

@@ -2,7 +2,7 @@
     <h2>Stock Allocation</h2>
 
     <!-- Dispatch Button -->
-    <button id="openDispatchModal" class="dispatch-btn">Dispatch Stock</button>
+    <button id="openDispatchModal" onclick="openDispatchModal()" class="dispatch-btn">Dispatch Stock</button>
 
     <!-- Dispatch Table -->
     <h3>Dispatched Stock</h3>
@@ -28,7 +28,8 @@
 <!-- Stock Allocation Modal -->
 <div id="dispatchModal">
     <div class="dispatch-content">
-        <span class="close">&times;</span>
+    <span class="close" onclick="closeModal('dispatchModal')">&times;</span>
+
         <h2>Dispatch Stock</h2>
         <form id="dispatchForm">
             <label for="item">Item:</label>

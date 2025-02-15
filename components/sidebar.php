@@ -4,7 +4,7 @@
     <img src="assets/images/logo.png" alt="Company Logo" class="company-logo">
   </div>
   <nav class="nav-menu">
-  <ul>
+  <ul id="sidebar-menu">
         <?php 
         $role = $_SESSION['role'] ?? ''; 
         ?>

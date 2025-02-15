@@ -40,7 +40,7 @@
 <!-- Add/Edit Stock Modal -->
 <div id="stockModal" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeStockModal()">&times;</span>
+        <span class="close" onclick="closeModal('stockModal')">&times;</span>
         <h3 id="modalTitle">Add Stock</h3>
         
         <form id="stockForm">
