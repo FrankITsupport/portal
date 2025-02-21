@@ -206,7 +206,8 @@ td.out {
 /* Form Inputs */
 .modal-content label {
     display: block;
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: bold;
 }
 .modal-content{
@@ -385,9 +386,9 @@ td.out {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease-in-out;
 }
-.dispatch-content h2 {
+.dispatch-content h2, label {
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     color: #2a9d8f; 
 }
 /* Fade-in Animation */
@@ -399,7 +400,6 @@ td.out {
 /* Form Styling */
 .dispatch-content label {
     display: block;
-    margin-top: 5px;
     font-weight: bold;
 }
 
@@ -407,7 +407,7 @@ td.out {
 .dispatch-content select {
     width: 100%;
     padding: 8px;
-    margin-top: 1px;
+    margin-top: 0;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
@@ -633,10 +633,11 @@ table th {
     position: relative;
 }
 
-.inventory-content h2 {
+.inventory-content h2, label{
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     color: #2a9d8f;
+    font-weight: bold;
 }
 
 .close {
